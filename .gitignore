@@ -1,3 +1,7 @@
-sim/*.vvp
-sim/*.vcd
-sim/sim.log
+# Simulation build artifacts (Icarus Verilog binaries, waveforms, logs)
+sim/
+
+# In case tools are run outside the sim/ directory
+*.vvp
+*.vcd
+*.log
