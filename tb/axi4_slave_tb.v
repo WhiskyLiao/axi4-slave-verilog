@@ -3,7 +3,7 @@
 //        byte-enable (WSTRB) masking, back-pressure on BREADY/RREADY.
 `timescale 1ns/1ps
 
-module tb_axi4_slave;
+module axi4_slave_tb;
 
     localparam AXI_ADDR_WIDTH    = 32;
     localparam AXI_DATA_WIDTH    = 32;
@@ -236,8 +236,8 @@ module tb_axi4_slave;
     // Stimulus
     // -----------------------------------------------------------------------
     initial begin
-        $dumpfile("tb_axi4_slave.vcd");
-        $dumpvars(0, tb_axi4_slave);
+        $dumpfile("sim/axi4_slave_tb.vcd");
+        $dumpvars(0, axi4_slave_tb);
 
         repeat(5) @(posedge ACLK);
         ARESETn = 1;
